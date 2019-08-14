@@ -1,8 +1,7 @@
-from base_classes import Environment
 import random
 
 
-class BiasedRockPaperScissorsEnv(Environment):
+class BiasedRockPaperScissorsEnv:
     """
     A simple mock game of rock paper scissors against an opponent
     who most often plays rock.

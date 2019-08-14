@@ -1,3 +1,5 @@
+# my implementation of reinforcement learning sessions for controlling training
+
 # Our goal in reinforcement learning is to,
 # given an environment,
 # learn an optimal policy.
@@ -80,45 +82,6 @@ class Session:
 
 def _adjust_epsilon(episodes, current_episode):
     return max(0, 1 - current_episode / episodes)
-
-
-class Environment:
-    """An environment for an agent to act in."""
-
-    def __init__(self):
-        pass
-
-    def step(self, state, action):
-        raise NotImplementedError
-
-
-class Agent:
-    """An agent which learns to seek reward in an environment."""
-
-    def __init__(self):
-        pass
-
-    def decide(self, state, action_space):
-        raise NotImplementedError
-        # should return action
-
-    def learn(self):
-        raise NotImplementedError
-
-
-class ActionSpace:
-    """A set of possible actions."""
-
-    def __init__(self):
-        pass
-
-    def sample(self):
-        """Uniformly randomly sample a random element of this space. """
-        raise NotImplementedError
-
-    def __contains__(self, x):
-        """Implements `if action in space:`"""
-        raise NotImplementedError
 
 
 # END GOAL

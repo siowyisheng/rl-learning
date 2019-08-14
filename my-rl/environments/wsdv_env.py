@@ -1,4 +1,3 @@
-from base_classes import Environment
 import random
 
 initial_state = {
@@ -116,7 +115,7 @@ MAP = {
     },
 }
 
-class WirSindDasVolkEnv(Environment):
+class WirSindDasVolkEnv:
     """
     The board game Wir Sind Das Volk! 
     https://boardgamegeek.com/boardgame/165401/wir-sind-das-volk

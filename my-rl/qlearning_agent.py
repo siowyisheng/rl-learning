@@ -1,9 +1,10 @@
-from base_classes import Agent
+# my implementation of a q-learning agent
+
 import random
 import numpy as np
 
 
-class QLearningAgent(Agent):
+class QLearningAgent:
     """An agent which uses Q learning to optimize actions in an environment."""
 
     def __init__(self, alpha, gamma):

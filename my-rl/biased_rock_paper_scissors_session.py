@@ -1,6 +1,6 @@
-from biased_rock_paper_scissors_env import BiasedRockPaperScissorsEnv
-from q_learning_agent import QLearningAgent
-from base_classes import Session
+from environments.biased_rock_paper_scissors_env import BiasedRockPaperScissorsEnv
+from qlearning_agent import QLearningAgent
+from session import Session
 from collections import Counter
 
 env = BiasedRockPaperScissorsEnv()
