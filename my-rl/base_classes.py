@@ -1,4 +1,6 @@
-# Our goal in reinforcement learning is to learn an optimal policy.
+# Our goal in reinforcement learning is to,
+# given an environment,
+# learn an optimal policy.
 
 # Q learning. Update a dictionary with state, action tuples mapped to
 # expected present value of future rewards.
@@ -19,7 +21,7 @@
 # epoch => initial state to terminal state, including learning/updating of values
 # alpha => learning rate = factor by which weights are adjusted
 # gamma => discount factor = factor by which future rewards are discounted to present value
-# epsilon => greed = explore = chance that the agent will explore instead of exploit
+# epsilon => curiosity vs greed, explore vs exploit = chance that the agent will explore instead of exploit
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -77,24 +79,7 @@ class Session:
 
 
 def _adjust_epsilon(episodes, current_episode):
-    # return max(0, 1 - 2 * current_episode / episodes)
     return max(0, 1 - current_episode / episodes)
-
-
-#     self.environment.reset()
-#     action = self.agent.decide(self.environment.state)
-#     new_state, reward, done, info = self.environment.step(action)
-#     self.environment.state = new_state
-#     self.environment.score += reward
-#     self.agent.learn(new_state, reward)
-#     self.agent.update_risk(episodes)
-#     if done:
-#         continue
-# return self.agent
-#     totalRewards[i] = epRewards
-
-# plt.plot(totalRewards)
-# plt.show()
 
 
 class Environment:
@@ -105,28 +90,6 @@ class Environment:
 
     def step(self, state, action):
         raise NotImplementedError
-        # next_state = {}  # or game state object
-        # reward = 0  # reward achieved by previous action
-        # done = False
-        # info = {}
-        # return next_state, reward, done, info
-
-    # @property
-    # def action_space(self):
-    #     raise NotImplementedError
-
-    # def render(self):
-    #     raise NotImplementedError
-    # print or display something on the screen here
-
-
-# Environment
-# initial_state: State
-# step(s, a) => state, reward, done, info
-
-# ActionSpace
-# n - size
-# sample() => action
 
 
 class Agent:
